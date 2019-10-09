@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIE-AP</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+        <script src="./anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+        <style>
+            body{
+                width: 100%;
+                height:500%;
+                margin:0px;
+                padding:0px;
+                background-color:bisque;
+                font-family: 'Libre Baskerville',serif;
+            }
+            header{
+                width:100%;
+                height:20%;
+                display: block;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                /*position: absolute;
+                top:0px;*/
+            }
+            @media only screen and (min-width: 768px) {
+               
+            .dl5 {
+                display: block;
+                font-weight: 300;
+                font-size: 300%;
+                color: #402d2d;
+                margin:0;
+                padding: 0% ;
+                padding-top: 1%;
+            }
+            .d16{
+                margin:0;
+                padding:0;
+                font-weight: 300;
+                font-size:200%;
+                color: #402d2d;
+                -webkit-animation-name: opac; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+                animation-name: opac;
+                animation-duration: 1s;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-fill-mode: forwards;
+                animation-delay: 1s;
+                opacity:0;
+                animation-fill-mode: forwards;
+            }
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            /* Standard syntax */
+            @keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            .dl5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0em;
+                padding-right: 0.05em;
+                padding-bottom: 0em;
+                line-height: 1em;
+            }
+
+            .dl5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                background-color: #402d2d;
+                transform-origin: 0.5 0;
+            }
+            .dl5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+            h1.m15{
+                display: none !important;
+            }
+            h1.m16{
+                display: none !important;
+            }
+            .m{
+                display: none !important;
+            }
+            
+            }
+
+
+
+
+            @media only screen and (max-width: 768px) {
+            .ml5 {
+                display: block;
+                font-weight: 300;
+                font-size: 300%;
+                color: #402d2d;
+                margin:0;
+                padding: 0% ;
+                padding-top: 1%;
+            }
+            .m16{
+                margin:0;
+                padding:0;
+                font-weight: 300;
+                font-size:200%;
+                color: #402d2d;
+                -webkit-animation-name: opac; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+                animation-name: opac;
+                animation-duration: 1s;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-fill-mode: forwards;
+                animation-delay: 1s;
+                opacity:0;
+                animation-fill-mode: forwards;
+            }
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            /* Standard syntax */
+            @keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            .ml5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0em;
+                padding-right: 0.05em;
+                padding-bottom: 0em;
+                line-height: 1em;
+            }
+
+            .ml5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                background-color: #402d2d;
+                transform-origin: 0.5 0;
+            }
+            .ml5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+            h1.d15{
+                display: none !important;
+            }
+            h1.d16{
+                display: none !important;
+            }
+            .d{
+                display: none;
+            }
+
+            }
+            .slideshow{
+                width:80%;
+                height:70%;
+                position:absolute;
+                top:20%;
+                right:0;
+                background-color: #402d2d;
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover; /* Resize the background image to cover the entire container */
+                animation-name: change;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes change {
+                0%{
+                    background-image: url('./rose.jpg');
+                }
+                0%{
+                    background-image: url('./rose.jpg');
+                    filter: blur(4px);
+                }
+                0%{
+                    background-image: url('./img_avatar.png');
+                }
+                0%{
+                    background-image: url('./img_avatar.png');
+                    filter: blur(4px);
+                }
+                
+                
+            }
+            .slideshowtext{
+                width:100%;
+                height:20%;
+                position: relative;
+                top:80%;
+                bottom: 0;
+                background-color: blue;
+            }
+              
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="dl5 d">
+                <span class="text-wrapper d">
+                  <span class="line line1 d"></span>
+                  <span class="letters letters-left d">Board of</span>
+                  <span class="letters ampersand d"> Intermediate </span>
+                  <span class="letters letters-right d">Education</span>
+                  <span class="line line2 d"></span>
+                </span>
+              
+            </h1>
+            <h1 class="d16 d">Government of Andhra Pradesh
+            </h1>
+            <h1 class="ml5 m">
+                    <span class="text-wrapper m">
+                      <span class="line line1 m"></span>
+                      <span class="letters letters-left m">B.</span>
+                      <span class="letters ampersand m"> I.</span>
+                      <span class="letters letters-right m">E</span>
+                      <span class="line line2 m"></span>
+                    </span>
+                  
+            </h1>
+            <h1 class="m16 m">Andhra Pradesh
+            </h1>         
+        </header>
+        <section class="slideshow" id="slideshow">
+            <div class="slideshowtext">Sample text awards sample thing to sample teacher for sampling</div>
+        </section>
+      
+    </body>
+    <script>
+        if(screen.width< 768){
+    anime.timeline({loop: false})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  });}else{
+  anime.timeline({loop: false})
+  .add({
+    targets: '.dl5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.dl5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.dl5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.dl5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.dl5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  });}
+  </script>
+</html>
