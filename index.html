@@ -522,6 +522,16 @@ p.totalabout{
   height:30%;
   width:100%;
 }
+.aboutfia{
+  height:30%;
+  width: 100%;
+  font-size: xx-large;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: underline;
+  padding:0;
+  margin:0;
+}
 span.idc {
   border-right: 10px solid;
   animation: caret 1s steps(1) infinite;
@@ -547,20 +557,6 @@ section.fia{
   flex-direction: column;
 
 }
-div.place{
-  height:30%;
-  width:100%;
-}
-div.aboutfia{
-  height:5%;
-  width:100%;
-  font-size: xx-large;
-  font-weight: 300;
-  text-align: center;
-  text-decoration: underline;
-  padding:0;
-  margin:0;
-}
 .accordion {
   background-color: #eee;
   color: #444;
@@ -583,8 +579,13 @@ div.aboutfia{
   display: none;
   background-color: white;
   overflow: hidden;
+  object-fit: scale-down;
 }
-
+.accimg{
+  height:auto;
+  width: 100%;
+  object-fit: contain;
+}
         </style>
     </head>
     <body id="body">
@@ -660,9 +661,10 @@ div.aboutfia{
 The <span class="buff">BIE</span> regulates and supervises the system of Intermediate education. It executes and governs various activities that include devising of courses of study, prescribing syllabus, conducting examinations, granting affiliations to colleges and, providing direction, support and leadership for all educational institutions under its jurisdiction. 
 </p>
 </section>
+
+<div class="empty"></div>
+<p class="aboutfia">Freedom for information act</p>
 <section class="fia">
-  <div class="place"></div>
-  <div class="aboutfia">Freedom for information act</div>
   <button class="accordion">Section 1</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -671,13 +673,13 @@ The <span class="buff">BIE</span> regulates and supervises the system of Interme
 <button class="accordion">Section 2</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <img src="./assets/Aether.png">
+  <img class="accimg" src="./assets/Aether.png">
 </div>
 
 <button class="accordion">Section 3</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <img src="./assets/Aether.png">
+  <img class="accimg" src="./assets/Aether.png">
 </div>
 </section>
         <script>
