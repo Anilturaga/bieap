@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIE Students</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+        <script src="./assets/anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+        <style>
+            html,body{
+                width: 100%;
+                height:100%;
+                margin:0px;
+                padding:0px;
+                font-family: 'Libre Baskerville',serif;
+                overflow-x: hidden;
+                background-color: bisque;
+                color:#402d2d;
+            }
+            header{
+                width:100%;
+                height:20%;
+                display: flex;
+                
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                object-fit: contain;
+                /*position: absolute;
+                top:0px;*/
+            }
+            @media only screen and (min-width: 768px) {
+              header{
+                flex-direction: row;
+              }
+               .names{
+                width:60%;
+              height:100%;   
+              display: flex;
+              flex-direction: column;
+               }
+            .dl5 {
+              width:100%;
+              height:50%;
+
+                display: block;
+                font-weight: 300;
+                font-size: xx-large;
+                color: #402d2d;
+                margin:0;
+                padding: 0% ;
+                padding-top: 1%;
+            }
+            .d16{
+              width:100%;
+              height:50%;
+                margin:0;
+                padding:0;
+                font-weight: 300;
+                font-size:x-large;
+                color: #402d2d;
+                -webkit-animation-name: opac; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+                animation-name: opac;
+                animation-duration: 1s;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-fill-mode: forwards;
+                animation-delay: 1s;
+                opacity:0;
+                animation-fill-mode: forwards;
+            }
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            /* Standard syntax */
+            @keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            .dl5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0em;
+                padding-right: 0.05em;
+                padding-bottom: 0em;
+                line-height: 1em;
+            }
+
+            .dl5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                background-color: #402d2d;
+                transform-origin: 0.5 0;
+            }
+            .dl5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+            h1.m15{
+                display: none !important;
+            }
+            h1.m16{
+                display: none !important;
+            }
+            .m{
+                display: none !important;
+            }
+            #llogo{
+                width:20%;
+                height:100%;
+            }
+            #rlogo{
+                width:20%;
+                height:20%;
+                
+            }
+            
+            img.logo{
+                height:auto;
+                width:auto;
+                object-fit: contain;
+            }
+            }
+            @media only screen and (max-width: 768px) {
+              header{
+                flex-direction: column;
+              }
+            .ml5 {
+                display: block;
+                font-weight: 300;
+                font-size:xx-large;
+                color: #402d2d;
+                margin:0;
+                padding: 0% ;
+                padding-top: 1%;
+            }
+            .m16{
+                margin:0;
+                padding:0;
+                font-weight: 300;
+                padding-top: 5%;
+                font-size:x-large;  
+                color: #402d2d;
+                -webkit-animation-name: opac; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+                animation-name: opac;
+                animation-duration: 1s;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-fill-mode: forwards;
+                animation-delay: 1s;
+                opacity:0;
+                animation-fill-mode: forwards;
+            }
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            /* Standard syntax */
+            @keyframes opac {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            .ml5 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0em;
+                padding-right: 0.05em;
+                padding-bottom: 0em;
+                line-height: 1em;
+            }
+
+            .ml5 .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                background-color: #402d2d;
+                transform-origin: 0.5 0;
+            }
+            .ml5 .letters {
+                display: inline-block;
+                opacity: 0;
+            }
+            h1.d15{
+                display: none !important;
+            }
+            h1.d16{
+                display: none !important;
+            }
+            .d{
+                display: none;
+            }
+            div.bglogoformobile{
+                background-image: url('./assets/ap-logo.png');
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size:contain; /* Resize the background image to cover the entire container */
+                filter: opacity(0.5);
+                z-index:-1;
+                height:20%;
+                width:100%;
+                position: absolute;
+                top:0;
+            }
+            }
+            .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+            </style>
+    </head>
+    <body>
+        <header>
+                <div class="bglogoformobile m"></div>
+                <div class="llogoholder d" id="llogo" data-aos="fade-down"><img src="./assets/ap-logo.png" style="width:auto" class="logo"></div>
+                <div class="names d"><h1 class="dl5 d">
+                    <span class="text-wrapper d">
+                      <span class="line line1 d"></span>
+                      <span class="letters letters-left d">Board of</span>
+                      <span class="letters ampersand d"> Intermediate </span>
+                      <span class="letters letters-right d">Education</span>
+                      <span class="line line2 d"></span>
+                    </span>
+                  
+                </h1>
+                <h1 class="d16 d">Government of Andhra Pradesh
+                </h1>
+              </div>
+                <h1 class="ml5 m">
+                        <span class="text-wrapper m">
+                          <span class="line line1 m"></span>
+                          <span class="letters letters-left m">B.</span>
+                          <span class="letters ampersand m"> I.</span>
+                          <span class="letters letters-right m">E</span>
+                          <span class="line line2 m"></span>
+                        </span>
+                      
+                </h1>
+                <h1 class="m16 m">Andhra Pradesh
+                </h1>         
+                <div class="rlogoholder d" id="rlogo" data-aos="fade-down"><img src="./assets/off-logo.png" style="width:auto" class="logo"></div>
+            
+        </header>
+        <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="students.html">Students</a></li>
+              </ul>
+        <section class="main">
+                <button class="accordion">General Courses</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <button class="accordion">M.P.C</button>
+                  <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button class="accordion">Syllabus</button>
+                    <div class="panel">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <button class="accordion">Model pages</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div>
+                        <button id="prev">Previous</button>
+                        <button id="next">Next</button>
+                        &nbsp; &nbsp;
+                        <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                      </div>
+                      
+                      <canvas id="the-canvas"></canvas>
+                
+                </div>
+                <button class="accordion">Audio and Visual cell</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                </div>
+                  <button class="accordion">Bi.P.C</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button class="accordion">C.E.C</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                
+                </div>
+                
+                <button class="accordion">Vocational Courses</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <button class="accordion">Application Forms</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion">Affliated Colleges</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <button class="accordion">Ananthapur</button>
+                  <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+                  <button class="accordion">Guntur</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button class="accordion">Vijayawada</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                
+                </div>
+        </section>
+    </body>
+    <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            if(screen.width< 768){
+    anime.timeline({loop: false})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  });}else{
+  anime.timeline({loop: false})
+  .add({
+    targets: '.dl5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.dl5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.dl5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.dl5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.dl5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  });}
+  AOS.init();
+  
+
+  // If absolute URL from the remote server is provided, configure the CORS
+// header on that server.
+var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
+
+// Loaded via <script> tag, create shortcut to access PDF.js exports.
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+// The workerSrc property shall be specified.
+pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+var pdfDoc = null,
+    pageNum = 1,
+    pageRendering = false,
+    pageNumPending = null,
+    scale = 0.8,
+    canvas = document.getElementById('the-canvas'),
+    ctx = canvas.getContext('2d');
+
+/**
+ * Get page info from document, resize canvas accordingly, and render page.
+ * @param num Page number.
+ */
+function renderPage(num) {
+  pageRendering = true;
+  // Using promise to fetch the page
+  pdfDoc.getPage(num).then(function(page) {
+    var viewport = page.getViewport({scale: scale});
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    // Render PDF page into canvas context
+    var renderContext = {
+      canvasContext: ctx,
+      viewport: viewport
+    };
+    var renderTask = page.render(renderContext);
+
+    // Wait for rendering to finish
+    renderTask.promise.then(function() {
+      pageRendering = false;
+      if (pageNumPending !== null) {
+        // New page rendering is pending
+        renderPage(pageNumPending);
+        pageNumPending = null;
+      }
+    });
+  });
+
+  // Update page counters
+  document.getElementById('page_num').textContent = num;
+}
+
+/**
+ * If another page rendering in progress, waits until the rendering is
+ * finised. Otherwise, executes rendering immediately.
+ */
+function queueRenderPage(num) {
+  if (pageRendering) {
+    pageNumPending = num;
+  } else {
+    renderPage(num);
+  }
+}
+
+/**
+ * Displays previous page.
+ */
+function onPrevPage() {
+  if (pageNum <= 1) {
+    return;
+  }
+  pageNum--;
+  queueRenderPage(pageNum);
+}
+document.getElementById('prev').addEventListener('click', onPrevPage);
+
+/**
+ * Displays next page.
+ */
+function onNextPage() {
+  if (pageNum >= pdfDoc.numPages) {
+    return;
+  }
+  pageNum++;
+  queueRenderPage(pageNum);
+}
+document.getElementById('next').addEventListener('click', onNextPage);
+
+/**
+ * Asynchronously downloads PDF.
+ */
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+  pdfDoc = pdfDoc_;
+  document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+  // Initial/first page rendering
+  renderPage(pageNum);
+});
+            </script>
+            
+
+
+</html>
